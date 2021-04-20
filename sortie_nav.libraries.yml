@@ -1,0 +1,4 @@
+sortie-navbar:
+  css:
+    theme:
+      css/sortie-navbar.css: {}

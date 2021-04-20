@@ -1,0 +1,59 @@
+/**
+ * Barre de navigation des sorties
+ * PBa 2020/01
+*/
+
+/* Couleurs */
+.sortie-navbar, .sortie-navbar a, .sortie-navbar ul {
+  background-color: #e65c00;
+  color: #ffffff;
+}
+
+/* Présentation de la barre de navigation */
+.sortie-navbar {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.2em 0;
+  padding: 0 0.2em;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.sortie-navbar li {
+  background-image: none;
+  padding: 0.2em;
+  font-weight: normal;
+}
+.sortie-navbar li:hover {
+  font-weight: bold;
+}
+.sortie-navbar .prec-lst ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: left;
+  list-style-type: none;
+  padding-left: 0;
+}
+.sortie-navbar .suiv-lst ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right;
+  list-style-type: none;
+  padding-right: 0;
+}
+.sortie-navbar .prec-lst:hover ul, .sortie-navbar .suiv-lst:hover ul {
+  display: block;
+}
+
+/* Ajustements sur la vue sortie pour une meilleure intégration de la barre de navigation */
+.view-sortie .view-content .nom-sortie, .view-sortie .view-content .views-field-field-type-de-sortie {
+  display: none;
+}
+.view-sortie .views-field-field-etat {
+  float: right;
+}

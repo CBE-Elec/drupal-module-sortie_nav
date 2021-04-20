@@ -1,0 +1,23 @@
+<?php
+use Symfony\Component\HttpFoundation\Request;
+use Drupal\Core\Routing;
+
+/**
+ * Implémentation de hook_theme() permettant de raccrocher un thème au module.
+ * Les variables utilisées par ce thème sont définies ici.
+ */
+function sortie_nav_theme($existing, $type, $theme, $path) {
+  return array(
+    'sortie_navbar' => array(
+      'variables' => array(
+        'sortie_type' => NULL,
+        'prec_lst' => array(),
+        'prec' => array(),
+        'courant' => array(),
+        'suiv' => array(),
+        'suiv_lst' => array(),
+      ),
+      'template' => 'sortie-navbar',
+    ),
+  );
+}

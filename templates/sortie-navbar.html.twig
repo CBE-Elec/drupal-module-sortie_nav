@@ -1,0 +1,39 @@
+{#
+/**
+ * @file
+ * Template pour la barre de navigation entre sorties.
+ * Variables:
+ * - sortie_type: filtre optionnel sur le type de sorties (exemple 'mer' ou 'lac+fosse').
+ * - prec_lst: array d'arrays (id, type, nom) pour les sorties précédentes.
+ * - courant: array (id, type, nom) pour la sortie courante.
+ * - suiv_lst: array d'arrays (id, type, nom) pour les sorties suivantes.
+ */
+#}
+{{ attach_library('sortie_nav/sortie-navbar') }}
+<div class="sortie-navbar">
+  <div class="prec-lst" onclick="">
+    {% if prec_lst is not empty %} << {% endif %}
+    <ul>
+    {% for sortie in prec_lst %}
+      <li><a href="/sortie/{{ sortie.id }}{% if sortie_type is not empty %}?type={{sortie_type}}{% endif %}">{{ sortie.type }} - {{ sortie.nom }}</a></li>
+    {% endfor %}
+    </ul>
+  </div>
+  <div class="prec">
+    <a href="/sortie/{{ prec.id }}{% if sortie_type is not empty %}?type={{sortie_type}}{% endif %}" title="{{ prec.type }} - {{ prec.nom }}">{% if prec.id is not empty %} < {% endif %}</a>
+  </div>
+  <div class="courant">
+    <a href="/sortie/{{ courant.id }}{% if sortie_type is not empty %}?type={{sortie_type}}{% endif %}">{{ courant.type }} - {{ courant.nom }}</a>
+  </div>
+  <div class="suiv">
+    <a href="/sortie/{{ suiv.id }}{% if sortie_type is not empty %}?type={{sortie_type}}{% endif %}" title="{{ suiv.type }} - {{ suiv.nom }}">{% if suiv.id is not empty %} > {% endif %}</a>
+  </div>
+  <div class="suiv-lst" onclick="">
+    {% if suiv_lst is not empty %} >> {% endif %}
+    <ul>
+    {% for sortie in suiv_lst %}
+      <li><a href="/sortie/{{ sortie.id }}{% if sortie_type is not empty %}?type={{sortie_type}}{% endif %}">{{ sortie.type }} - {{ sortie.nom }}</a></li>
+    {% endfor %}
+    </ul>
+  </div>
+</div>

@@ -1,15 +1,5 @@
 {
     "name": "aquarius/sortie_nav",
     "description": "An example composer.json file for a custom module.",
-    "type": "drupal-custom-module",
-    "version": "1.0.1",
-    "authors": [
-        {
-            "name": "",
-            "email": ""
-        }
-    ],
-    "require": {
-        "drupal/drupal": "^8.8"
-    }
+    "type": "drupal-custom-module"
 }

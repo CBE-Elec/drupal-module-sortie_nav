@@ -1,0 +1,13 @@
+{
+    "name": "aquarius/sortie_nav",
+    "description": "Navigation bar for sortie view",
+    "type": "drupal-custom-module",
+    "authors": [
+        {
+            "name": "Cyril Béguet",
+            "email": "webmaster.beguet@free.fr"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}

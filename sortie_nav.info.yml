@@ -1,8 +1,8 @@
 name: Barre de navigation entre sorties
 type: module
-core: 8.x
 description: Module pour naviguer entre les sorties de l'Aquarius (bloc associé à la vue sortie).
-version: 8.x-0.dev
-package: Aquarius
+package: 'Aquarius'
+version: '1.1.0'
+core_version_requirement: ^8 || ^9
 dependencies:
   - block

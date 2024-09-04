@@ -1,6 +1,7 @@
 /**
  * Barre de navigation des sorties
  * PBa 2020/01
+  - CBE - 2024-09-04 - correction marge menu gauche suite passage à Claro
 */
 
 /* Couleurs */
@@ -36,6 +37,7 @@
   text-align: left;
   list-style-type: none;
   padding-left: 0;
+  margin-inline: 0;
 }
 .sortie-navbar .suiv-lst ul {
   display: none;
